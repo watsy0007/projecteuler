@@ -1,13 +1,5 @@
 # https://zh.wikipedia.org/wiki/質數定理
-from math import sqrt
-
-
-# https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法
-def is_prime(n):
-    for i in range(2, int(sqrt(n) + 1)):
-        if n % i == 0:
-            return False
-    return True
+from utils import is_prime
 
 
 def prime_by_index(number, index):
