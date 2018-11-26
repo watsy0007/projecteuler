@@ -1,6 +1,7 @@
 from math import sqrt
 from functools import reduce
 from operator import mul
+from functools import lru_cache
 
 
 # https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法
@@ -19,3 +20,10 @@ def is_prime(n: int) -> bool:
 
 def reduce_mul(value):
     return reduce(mul, map(int, value))
+
+
+@lru_cache(maxsize=64)
+def factorial(value):
+    if value == 1:
+        return 1
+    return factorial(value - 1) * value
