@@ -1,5 +1,4 @@
-from functools import reduce
-from operator import mul
+from utils import reduce_mul
 
 number = '''
 73167176531330624919225119674426574742355349194934
@@ -23,10 +22,6 @@ number = '''
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
 '''
-
-
-def reduce_mul(value):
-    return reduce(mul, map(int, value))
 
 
 def run():

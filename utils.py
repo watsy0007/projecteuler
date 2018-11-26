@@ -1,4 +1,6 @@
 from math import sqrt
+from functools import reduce
+from operator import mul
 
 
 # https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法
@@ -13,3 +15,7 @@ def is_prime(n: int) -> bool:
         if n % i == 0:
             return False
     return True
+
+
+def reduce_mul(value):
+    return reduce(mul, map(int, value))
