@@ -24,3 +24,6 @@ def test():
 
 if __name__ == '__main__':
     run()
+
+
+# python p_3.py  0.14s user 0.01s system 96% cpu 0.154 total
